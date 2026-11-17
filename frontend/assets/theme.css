@@ -1,0 +1,358 @@
+/* AERIS XAI - Professional Aerospace Intelligence Dark Navy Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-main: #0a0e1a;
+    --bg-card: #0f172a;
+    --bg-card-hover: #131e35;
+    --bg-input: #1e293b;
+    --border-color: #1e293b;
+    --border-bright: #334155;
+    --accent-blue: #00aaff;
+    --accent-cyan: #38bdf8;
+    --accent-indigo: #6366f1;
+    --accent-emerald: #10b981;
+    --accent-amber: #f59e0b;
+    --accent-rose: #f43f5e;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --font-heading: 'Rajdhani', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+    margin-top: 0;
+}
+
+/* Nav Header */
+.aeris-nav-header {
+    background-color: #080c16;
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.aeris-logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.aeris-logo-text {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    letter-spacing: 1.5px;
+}
+
+.aeris-logo-tag {
+    font-size: 11px;
+    background: rgba(0, 170, 255, 0.15);
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-cyan);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+
+.nav-links-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.nav-link-btn {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.nav-link-btn:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-card);
+}
+
+.nav-link-btn.active {
+    color: var(--accent-cyan);
+    background-color: rgba(0, 170, 255, 0.12);
+    border: 1px solid rgba(0, 170, 255, 0.3);
+}
+
+/* Container */
+.main-container {
+    padding: 24px 28px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Cards */
+.aeris-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.aeris-card:hover {
+    border-color: var(--border-bright);
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* KPI metric boxes */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.kpi-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-blue);
+}
+
+.kpi-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kpi-value {
+    font-family: var(--font-mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 6px;
+}
+
+.kpi-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Forms & Inputs */
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.aeris-input, .aeris-select, .Select-control {
+    background-color: var(--bg-input) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.aeris-input:focus {
+    border-color: var(--accent-blue) !important;
+    outline: none;
+}
+
+/* Buttons */
+.btn-aeris-primary {
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-aeris-primary:hover {
+    background-color: var(--accent-blue);
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+}
+
+.btn-aeris-secondary {
+    background-color: var(--bg-input);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-bright);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-aeris-secondary:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-cyan);
+}
+
+.btn-aeris-danger {
+    background-color: rgba(244, 63, 94, 0.15);
+    color: var(--accent-rose);
+    border: 1px solid rgba(244, 63, 94, 0.4);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Badges */
+.badge-synthetic {
+    background: rgba(14, 165, 233, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(14, 165, 233, 0.4);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge-uploaded {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge-anomaly {
+    background: rgba(244, 63, 94, 0.2);
+    color: #fb7185;
+    border: 1px solid #f43f5e;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Upload drag and drop box */
+.aeris-upload-box {
+    border: 2px dashed var(--border-bright);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(30, 41, 59, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.aeris-upload-box:hover {
+    border-color: var(--accent-blue);
+    background-color: rgba(0, 170, 255, 0.05);
+}
+
+/* Tables */
+.aeris-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.aeris-table th {
+    background-color: #0b1120;
+    color: var(--text-secondary);
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.aeris-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.aeris-table tr:hover td {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Disclaimer notice banner */
+.disclaimer-banner {
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 3px solid var(--accent-indigo);
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #c7d2fe;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}

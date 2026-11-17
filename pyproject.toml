@@ -1,0 +1,54 @@
+[project]
+name = "aeris-xai"
+version = "0.1.0"
+description = "Local laboratory for synthetic flight telemetry, anomaly detection, and explainable AI."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn>=0.32",
+    "dash>=2.18",
+    "plotly>=5.24",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scikit-learn>=1.5",
+    "torch>=2.2",
+    "shap>=0.46",
+    "mlflow>=2.16",
+    "sqlalchemy>=2.0",
+    "pyjwt>=2.9",
+    "bcrypt>=4.2",
+    "pydantic-settings>=2.4",
+    "python-multipart>=0.0.12",
+    "httpx>=0.27",
+    "joblib>=1.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3"]
+
+[tool.setuptools]
+packages = [
+    "aeris_data",
+    "backend",
+    "backend.api",
+    "backend.api.routers",
+    "backend.db",
+    "backend.security",
+    "backend.services",
+    "frontend",
+    "frontend.pages",
+    "ml",
+    "ml.models",
+]
+
+[tool.setuptools.package-dir]
+"" = "."
+"aeris_data" = "datasets"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

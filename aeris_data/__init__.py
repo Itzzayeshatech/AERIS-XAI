@@ -1,0 +1,42 @@
+"""Alias package for aeris_data mapping directly to datasets."""
+from datasets.schema import (
+    ANOMALY_TYPES,
+    EVAL_COLUMNS,
+    FORECAST_TARGETS,
+    IDENTITY,
+    MIN_DISTINCT_FLIGHTS,
+    NUMERIC_FEATURES,
+    PHASES,
+    REPLAY_ONLY,
+    REQUIRED_COLUMNS,
+    WINDOW_LENGTH,
+    WINDOW_STRIDE,
+    SchemaError,
+    has_evaluation_labels,
+    label_kind,
+    phase_feature_names,
+    validate_frame,
+)
+from datasets.generate import anomaly_for_index, generate_flight, phase_counts
+
+__all__ = [
+    "ANOMALY_TYPES",
+    "EVAL_COLUMNS",
+    "FORECAST_TARGETS",
+    "IDENTITY",
+    "MIN_DISTINCT_FLIGHTS",
+    "NUMERIC_FEATURES",
+    "PHASES",
+    "REPLAY_ONLY",
+    "REQUIRED_COLUMNS",
+    "WINDOW_LENGTH",
+    "WINDOW_STRIDE",
+    "SchemaError",
+    "has_evaluation_labels",
+    "label_kind",
+    "phase_feature_names",
+    "validate_frame",
+    "anomaly_for_index",
+    "generate_flight",
+    "phase_counts",
+]
